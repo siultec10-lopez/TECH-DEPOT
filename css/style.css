@@ -28,8 +28,8 @@ body {
     "Noto Sans",
     sans-serif
   );
-  background: var(--bg, #0f1115);
-  color: var(--text, #e6eaf2);
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* Sticky footer (empuja el footer abajo en páginas “vacías”) */
