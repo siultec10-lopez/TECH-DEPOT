@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TECH DEPOT — Tecnología a tu alcance, ecoamigable</title>
+    <meta
+      name="description"
+      content="TECH DEPOT: tecnología a tu alcance. Laptops, desktops y equipos gaming con enfoque ecoamigable. Servicio técnico y contacto."
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos del sitio -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="./assets/img/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- NAVBAR -->
+    <header
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      role="banner"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="./index.html"
+          aria-label="Ir al inicio TECH DEPOT"
+        >
+          <img
+            src="./assets/img/Logo Tech Depot 2.png"
+            alt="Tech Depot"
+            width="160"
+            height="48"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navPrincipal"
+          aria-controls="navPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav
+          class="collapse navbar-collapse"
+          id="navPrincipal"
+          aria-label="Principal"
+        >
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html" aria-current="page"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Pages/productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Pages/gaming.html">Gaming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Pages/servicio-tecnico.html"
+                >Servicio técnico</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- Portada / Hero -->
+      <section aria-labelledby="hero-title">
+        <div class="texto">
+          <h1 id="hero-title">TECH DEPOT</h1>
+          <p>Tecnología a tu alcance, ecoamigable</p>
+        </div>
+
+        <figure class="media">
+          <img
+            src="./assets/img/Portada.jpeg"
+            alt="Portada con equipos de tecnología de Tech Depot"
+          />
+        </figure>
+
+        <div>
+          <a class="boton" href="./Pages/productos.html">Ver catálogo</a>
+        </div>
+      </section>
+
+      <!-- Productos destacados -->
+      <section aria-labelledby="destacados-title">
+        <h2 id="destacados-title">Productos destacados</h2>
+
+        <ul class="tarjetas">
+          <li class="tarjeta">
+            <article>
+              <h3>Laptop</h3>
+              <img
+                src="./assets/img/Laptop.jpg"
+                alt="Laptop Dell en mesa de trabajo"
+              />
+            </article>
+          </li>
+          <li class="tarjeta">
+            <article>
+              <h3>Desktop</h3>
+              <img
+                src="./assets/img/Desktop.jpg"
+                alt="Desktop Dell con monitor"
+              />
+            </article>
+          </li>
+          <li class="tarjeta">
+            <article>
+              <h3>Gaming</h3>
+              <img
+                src="./assets/img/Gaming.jpg"
+                alt="PC gamer con iluminación RGB"
+              />
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+      <section
+        class="container d-flex align-items-center justify-content-between gap-3 py-3"
+        aria-labelledby="footer-brand"
+      >
+        <a href="./index.html" aria-label="Volver al inicio">
+          <img
+            src="./assets/img/Logo Tech Depot 2.png"
+            alt="Logotipo de Tech Depot"
+            width="160"
+            height="48"
+          />
+        </a>
+
+        <p class="social mb-0">Síguenos en nuestras redes:</p>
+
+        <ul class="redes">
+          <li>
+            <a
+              href="https://www.facebook.com/techdepot.sps"
+              target="_blank"
+              rel="noopener"
+              ><img src="./assets/img/Facebook.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/tech_depot_sps?igsh=MXAzcG5pbWxrMzlwMw=="
+              target="_blank"
+              rel="noopener"
+              ><img src="./assets/img/instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=50433005408"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp de Tech Depot"
+              ><img src="./assets/img/Whatsapp.png" alt="WhatsApp"
+            /></a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
