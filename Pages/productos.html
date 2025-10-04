@@ -82,66 +82,428 @@
 
     <!-- CONTENIDO -->
     <main id="contenido" class="container py-4">
+      <!-- Encabezado -->
       <header class="mb-4">
         <h1 class="mb-1">Productos</h1>
-        <p class="muted">Tecnología a tu alcance, ecoamigable.</p>
+        <p class="text-muted">Tecnología a tu alcance, ecoamigable.</p>
       </header>
 
-      <section aria-labelledby="grid-title">
-        <h2 id="grid-title" class="sr-only">Catálogo de productos</h2>
-
-        <ul class="tarjetas">
-          <!-- Producto 1 -->
-          <li class="tarjeta">
-            <article>
-              <h3>Laptop Dell Latitude</h3>
-              <img
-                src="../assets/img/Laptop.jpg"
-                alt="Laptop Dell Latitude sobre escritorio"
-              />
-              <p>
-                Portátil renovada con procesador Intel i5, 8GB RAM y 256GB SSD.
-                Ideal para oficina o estudio.
-              </p>
-              <strong>$499.99</strong><br />
-              <a href="#" class="boton mt-2">Comprar</a>
-            </article>
+      <!--Categorías -->
+      <nav class="mb-4" aria-label="Filtrar por categoría">
+        <ul class="nav nav-pills gap-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#laptops">Laptops</a>
           </li>
-
-          <!-- Producto 2 -->
-          <li class="tarjeta">
-            <article>
-              <h3>Desktop HP ProDesk</h3>
-              <img
-                src="../assets/img/Desktop.jpg"
-                alt="Desktop HP ProDesk con monitor"
-              />
-              <p>
-                Equipo de escritorio confiable: AMD Ryzen 5, 16GB RAM, 512GB
-                SSD. Perfecto para trabajo multitarea.
-              </p>
-              <strong>$699.99</strong><br />
-              <a href="#" class="boton mt-2">Comprar</a>
-            </article>
+          <li class="nav-item">
+            <a class="nav-link" href="#desktops">Desktops</a>
           </li>
-
-          <!-- Producto 3 -->
-          <li class="tarjeta">
-            <article>
-              <h3>PC Gaming RGB</h3>
-              <img
-                src="../assets/img/Gaming.jpg"
-                alt="PC gamer con iluminación RGB"
-              />
-              <p>
-                PC de alto rendimiento: Intel i7, 16GB RAM, 1TB SSD, GTX 1660.
-                Listo para tus partidas.
-              </p>
-              <strong>$999.99</strong><br />
-              <a href="#" class="boton mt-2">Comprar</a>
-            </article>
+          <li class="nav-item">
+            <a class="nav-link" href="#aio">All in One</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#monitores">Monitores</a>
           </li>
         </ul>
+      </nav>
+
+      <!-- Laptops -->
+      <section id="laptops" class="mb-5" aria-labelledby="title-laptops">
+        <h2 id="title-laptops" class="mb-4">Laptops</h2>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
+        >
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Laptop Dell 7420.jpg"
+                class="card-img-top"
+                alt="Laptop Dell Latitude 7420"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell Latitude 7420</h5>
+                <p class="card-text">
+                  Intel Core I7 11TH, 8GB RAM, 256GB SSD. Ideal para oficina.
+                </p>
+                <strong>L. 11000</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Laptop Dell 5490.jpg"
+                class="card-img-top"
+                alt="Laptop Dell Latitude 5490"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell Latitude 5490</h5>
+                <p class="card-text">Intel Core I5 8TH, 8TH RAM, 240GB SSD.</p>
+                <strong>L. 6800</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Laptop Dell 5480.jpg"
+                class="card-img-top"
+                alt="Laptop Dell Latitude 5480"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell Latitude 5480</h5>
+                <p class="card-text">Intel Core I7 7TH, 8GB RAM, 240GB SSD.</p>
+                <strong>L. 7500</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Laptop Dell 3470.jpg"
+                class="card-img-top"
+                alt="Laptop Dell Latitude 3470"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell Latitude 3470</h5>
+                <p class="card-text">Intel Core I5 6TH, 8GB RAM, 240GB SSD.</p>
+                <strong>L. 6000</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Laptop Dell 3410.jpg"
+                class="card-img-top"
+                alt="Laptop Dell Latitude 3410"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell Latitude 3410</h5>
+                <p class="card-text">Intel Core I5 10TH, 8GB RAM, 240GB SSD.</p>
+                <strong>L. 8500</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Desktops -->
+      <section id="desktops" class="mb-5" aria-labelledby="title-desktops">
+        <h2 id="title-desktops" class="mb-4">Desktops</h2>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
+        >
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Desktop Dell 3070 DM.jpg"
+                class="card-img-top"
+                alt="Desktop Dell OptiPlex 3070"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell OptiPlex 3070 DM</h5>
+                <p class="card-text">Intel Core I5 9TH, 8GB RAM, 240GB SSD.</p>
+                <strong>L. 6900</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Desktop Dell 3050 DM.jpg"
+                class="card-img-top"
+                alt="Desktop Dell OptiPlex 3050"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell OptiPlex 3050 DM</h5>
+                <p class="card-text">Intel Core I5 7TH, 8TH RAM, 240GB SSD.</p>
+                <strong>L. 4999</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Desktop Dell 3040.jpg"
+                class="card-img-top"
+                alt="Desktop Dell OptiPlex 3040"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell OptiPlex 3040 SFF</h5>
+                <p class="card-text">
+                  IntelCore I5 6TH, 16GB RAM, 128GB SSD, 500GB HDD.
+                </p>
+                <strong>L. 4499</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Desktop Dell 3020.jpg"
+                class="card-img-top"
+                alt="Desktop Dell OptiPlex 3020"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell OptiPlex 3020 SFF</h5>
+                <p class="card-text">Intel Core I5 4TH, 8GB RAM, 240GB SSD.</p>
+                <strong>L. 3499</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Desktop Hp 705 G2 MT.jpg"
+                class="card-img-top"
+                alt="Desktop Hp 705 G2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hp 705 G2 MT</h5>
+                <p class="card-text">
+                  AMD PRO A8, 32GB RAM, 240GB SSD, 500GB HDD.
+                </p>
+                <strong>L. 4500</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All in One -->
+      <section id="aio" class="mb-5" aria-labelledby="title-aio">
+        <h2 id="title-aio" class="mb-4">All in One</h2>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
+        >
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/AIO Dell 7550.jpg"
+                class="card-img-top"
+                alt="AIO Dell OptiPlex 7450"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell OptiPlex 7450 24"</h5>
+                <p class="card-text">
+                  Intel Core I3 6TH, 8GB RAM, 128GB SSD. FHD.
+                </p>
+                <strong>L. 5500</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/AIO Dell 3030.jpg"
+                class="card-img-top"
+                alt="AIO Dell OptiPlex 3030"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell OptiPlex 3030 20"</h5>
+                <p class="card-text">Core I3 4TH, 8GB RAM, 128GB SSD.</p>
+                <strong>L. 3800</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/AIO Hp 800 G3.jpg"
+                class="card-img-top"
+                alt="AIO Hp EliteDesk 800 G3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hp EliteDesk 800 G3 24"</h5>
+                <p class="card-text">Intel Core I7 7TH, 8GB RAM, 240GB SSD.</p>
+                <strong>L. 8699</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/AIO Lenovo M73z.jpg"
+                class="card-img-top"
+                alt="AIO Lenovo ThinkCentre M73z"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lenovo ThinkCentre M73z 22"</h5>
+                <p class="card-text">Intel Core I3 4TH, 8GB RAM, 128GB SSD.</p>
+                <strong>L. 3900</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/AIO Imac A1418.jpg"
+                class="card-img-top"
+                alt="AIO Apple Imac A1418"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Apple Imac A1418 21.5"</h5>
+                <p class="card-text">Intel Core I5 5TH, 8GB RAM, 240GB SSD.</p>
+                <strong>L. 7500</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monitores -->
+      <section id="monitores" class="mb-3" aria-labelledby="title-monitores">
+        <h2 id="title-monitores" class="mb-4">Monitores</h2>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
+        >
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Monitor Dell32.jpg"
+                class="card-img-top"
+                alt="Monitor Dell Ultrasharp 32"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dell Ultrasharp 32" 4K</h5>
+                <p class="card-text">IPS, 60Hz, HDMI, DP, Type C.</p>
+                <strong>L. 7500</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Monitor Acer24.jpg"
+                class="card-img-top"
+                alt="Monitor Acer Nitro 24"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Acer Nitro 24" FHD</h5>
+                <p class="card-text">Gaming, IPS,1ms, 165Hz, HDMI, DP.</p>
+                <strong>L. 4300</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Monitor Spekz24.jpg"
+                class="card-img-top"
+                alt="Monitor SPEKZ 24"
+              />
+              <div class="card-body">
+                <h5 class="card-title">SPEKZ 24" FHD</h5>
+                <p class="card-text">IPS, 75Hz, HDMI, VGA.</p>
+                <strong>L. 3000</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Monitor Hp23.jpg"
+                class="card-img-top"
+                alt="Monitor HP 23 Con Camara"
+              />
+              <div class="card-body">
+                <h5 class="card-title">HP 23" FHD</h5>
+                <p class="card-text">IPS, VGA, DP, Camara , 60Hz.</p>
+                <strong>L. 1800</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../assets/img/Gaming Monitor 23.jpg"
+                class="card-img-top"
+                alt="Monitor Samsung 23 Curvo"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Samsung 23" Curvo UHD</h5>
+                <p class="card-text">Gaming, VA, 100Hz, HDMI, VGA</p>
+                <strong>L. 3775</strong>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
