@@ -83,57 +83,360 @@
 
     <main id="contenido">
       <!-- Portada / Hero -->
+
       <section aria-labelledby="hero-title">
         <div class="texto">
           <h1 id="hero-title">TECH DEPOT</h1>
           <p>Tecnología a tu alcance, ecoamigable</p>
         </div>
 
-        <figure class="media">
-          <img
-            src="./assets/img/Portada.jpeg"
-            alt="Portada con equipos de tecnología de Tech Depot"
-          />
-        </figure>
+        <!-- Carousel de imágenes -->
 
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3500"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./assets/img/Portada.jpeg"
+                class="d-block w-100"
+                alt="Portada 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/Portada1.jpeg"
+                class="d-block w-100"
+                alt="Portada 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/Portada2.png"
+                class="d-block w-100"
+                alt="Portada 3"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/Portada5.png"
+                class="d-block w-100"
+                alt="Portada 4"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
         <div>
           <a class="boton" href="./Pages/productos.html">Ver catálogo</a>
         </div>
       </section>
 
-      <!-- Productos destacados -->
-      <section aria-labelledby="destacados-title">
-        <h2 id="destacados-title">Productos destacados</h2>
+      <!-- Ofertas mensuales -->
+      <section aria-labelledby="ofertas-title" class="ofertas-grid">
+        <h2 id="ofertas-title">Ofertas del Mes</h2>
 
-        <ul class="tarjetas">
-          <li class="tarjeta">
-            <article>
-              <h3>Laptop</h3>
-              <img
-                src="./assets/img/Laptop.jpg"
-                alt="Laptop Dell en mesa de trabajo"
-              />
-            </article>
-          </li>
-          <li class="tarjeta">
-            <article>
-              <h3>Desktop</h3>
-              <img
-                src="./assets/img/Desktop.jpg"
-                alt="Desktop Dell con monitor"
-              />
-            </article>
-          </li>
-          <li class="tarjeta">
-            <article>
-              <h3>Gaming</h3>
-              <img
-                src="./assets/img/Gaming.jpg"
-                alt="PC gamer con iluminación RGB"
-              />
-            </article>
-          </li>
-        </ul>
+        <div class="ofertas-grid-container">
+          <!-- Carrusel Laptop -->
+          <div class="oferta">
+            <h3 class="oferta-titulo">Laptop</h3>
+            <div
+              id="carLaptop"
+              class="carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carLaptop"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Imagen 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carLaptop"
+                  data-bs-slide-to="1"
+                  aria-label="Imagen 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carLaptop"
+                  data-bs-slide-to="2"
+                  aria-label="Imagen 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./assets/img/Laptop Dell 3410.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Laptop vista 1"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/Laptop Dell 3470.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Laptop vista 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/Laptop Dell 5480.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Laptop vista 3"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carLaptop"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carLaptop"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carrusel Desktop -->
+          <div class="oferta">
+            <h3 class="oferta-titulo">Desktop</h3>
+            <div
+              id="carDesktop"
+              class="carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carDesktop"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Imagen 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carDesktop"
+                  data-bs-slide-to="1"
+                  aria-label="Imagen 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carDesktop"
+                  data-bs-slide-to="2"
+                  aria-label="Imagen 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./assets/img/Desktop Dell 3040.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Desktop vista 1"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/Desktop Dell 3050 DM.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Desktop vista 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/Desktop Dell 3070 DM.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Desktop vista 3"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carDesktop"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carDesktop"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carrusel Gaming -->
+          <div class="oferta">
+            <h3 class="oferta-titulo">Gaming</h3>
+            <div
+              id="carGaming"
+              class="carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carGaming"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Imagen 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carGaming"
+                  data-bs-slide-to="1"
+                  aria-label="Imagen 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carGaming"
+                  data-bs-slide-to="2"
+                  aria-label="Imagen 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./assets/img/Gaming PC RYZEN 7.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Gaming vista 1"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/Gaming PC I5 12TH.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Gaming vista 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/Gaming Case Ceres 330.jpg"
+                    class="d-block w-100 oferta-img"
+                    alt="Gaming vista 3"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carGaming"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carGaming"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
