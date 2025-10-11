@@ -84,10 +84,173 @@
     </header>
 
     <main id="contenido" class="container py-4">
-      <h1>Servicio técnico</h1>
-      <p class="muted">Próximamente: detalle de servicios y contacto.</p>
-    </main>
+      <!-- Hero con “neón” -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <h1>Servicio técnico</h1>
+            <p>
+              Reparación de PC, Laptops y AIO, optimización de rendimiento,
+              limpieza física y lógica, respaldo y recuperación de datos.
+              Soporte remoto en el acto.
+            </p>
+            <div class="hero__cta">
+              <a href="#contacto" class="btn btn--primary">Reserva Cita</a>
+              <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+            </div>
+            <ul class="badges">
+              <li>⏱️ 24–48h</li>
+              <li>🛡️ Garantía</li>
+              <li>🌐 Remoto</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+      <!-- Servicios -->
+      <section id="servicios" class="section">
+        <div class="container">
+          <h2 class="section__title">Servicios</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Mantenimiento & Optimización</h3>
+              <p>
+                Limpieza interna, pasta térmica, drivers, y calibración para que
+                tu equipo vuelva a volar.
+              </p>
+              <ul class="list">
+                <li>Diagnóstico completo</li>
+                <li>Optimización de arranque</li>
+                <li>Actualización de firmware</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Formateo & Recovery</h3>
+              <p>
+                Instalación limpia, backup seguro y recuperación de archivos
+                cuando todo parece perdido.
+              </p>
+              <ul class="list">
+                <li>Windows / Linux</li>
+                <li>Particionado y backup</li>
+                <li>Recuperación de datos</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Soporte Remoto</h3>
+              <p>
+                Te asistimos vía remota para resolver problemas al instante, sin
+                moverte de tu casa.
+              </p>
+              <ul class="list">
+                <li>Configuración de redes</li>
+                <li>Eliminación de malware</li>
+                <li>Ofimática y drivers</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Armado & Upgrade</h3>
+              <p>
+                Querés más FPS o render más rápido: te recomendamos y armamos el
+                upgrade ideal.
+              </p>
+              <ul class="list">
+                <li>SSD, RAM, GPU</li>
+                <li>Fuente y refrigeración</li>
+                <li>Pruebas de estrés</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cómo trabajamos -->
+      <section id="como-trabajamos" class="section section--alt">
+        <div class="container">
+          <h2 class="section__title">Cómo trabajamos</h2>
+          <ol class="steps">
+            <li>
+              <strong>Retiro a domicilio</strong>
+              <span
+                >Coordinamos el retiro de tu equipo en tu domicilio o trabajo,
+                con seguimiento desde el primer momento. Si preferís, podés
+                traerlo a nuestras oficinas cuando te quede cómodo.</span
+              >
+            </li>
+            <li>
+              <strong>Diagnóstico</strong>
+              <span>Detectamos el problema y te damos presupuesto claro.</span>
+            </li>
+            <li>
+              <strong>Mano a la obra</strong>
+              <span>Reparación, limpieza y pruebas con métricas.</span>
+            </li>
+            <li>
+              <strong>Entrega y garantía</strong>
+              <span
+                >Te lo devolvemos optimizado y con garantía por escrito.</span
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
+      <!-- Reserva de Cita -->
+      <section id="contacto" class="section">
+        <div class="container">
+          <h2 class="section__title">Reserva Cita</h2>
+          <form
+            class="form"
+            action="#"
+            method="post"
+            aria-label="Formulario de contacto"
+          >
+            <div class="form__group">
+              <label for="nombre">Nombre</label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="tunombre@email.com"
+                required
+              />
+            </div>
+            <div class="form__group">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="Contame qué le pasa a tu equipo"
+                required
+              ></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">
+              Enviar consulta
+            </button>
+          </form>
+          <p class="small note">
+            También por WhatsApp:
+            <a href="https://wa.me/50433005408" target="_blank" rel="noopener"
+              ><img
+                src="../assets/img/Whatsapp-circulo.png"
+                alt="WhatsApp"
+                class="icono-whatsapp"
+              />+504 3300-5408</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
     <!-- FOOTER -->
     <footer role="contentinfo">
       <section

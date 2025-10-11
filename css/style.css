@@ -29,7 +29,7 @@ body {
     sans-serif
   );
   background: var(--bg);
-  color: var(--text);
+  color: var(--brand);
 }
 ul,
 ol {
@@ -37,23 +37,14 @@ ol {
   padding: 0;
   list-style: none;
 }
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Variables globales (paleta + UI) */
 :root {
+  --ring: 0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.04);
   --bg: #0f1115;
   --bg-soft: #151823;
   --card: #1b2030;
-  --text: #e6eaf2;
-  --muted: #a8b0c2;
+  --muted: #ffffff;
   --brand: #e25c03;
   --brand-2: #3a57ff;
   --ok: #19c37d;
@@ -62,8 +53,6 @@ svg {
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --gap: 20px;
   --transition: 180ms ease;
-  --font: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 /* ============================================================
    1) HEADER + NAV (Flexbox) — compatible con Bootstrap
@@ -79,7 +68,7 @@ header[role="banner"] {
   padding: 0.2rem var(--gap);
   background: var(--bg-soft);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 2px 6px var(--brand-2);
+  box-shadow: 0 2px 6px var(--brand);
 }
 .navbar-brand img {
   height: auto;
@@ -141,41 +130,35 @@ section[aria-labelledby="hero-title"] #carouselExampleIndicators {
   margin-inline: auto;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 14px var(--brand);
+  box-shadow: 0 0 14px var(--brand);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 section[aria-labelledby="hero-title"] #carouselExampleIndicators:hover {
-  box-shadow: 0 4px 14px var(--brand-2);
+  box-shadow: 0 0 14px var(--brand-2);
 }
 /* boton hero */
 .boton {
   text-decoration: none;
   display: inline-block;
   background: var(--brand);
-  color: var(--text);
+  color: var(--muted);
   padding: 0.75rem 1rem;
   border-radius: var(--radius);
-  box-shadow: 0 4px 8px var(--brand);
+  box-shadow: 0 0 8px var(--brand);
   transition: background var(--transition), transform var(--transition);
   text-align: center;
 }
 .boton:hover {
   background: var(--brand-2);
   transform: translateY(-1px);
-  box-shadow: 0 4px 15px var(--brand-2);
-  color: var(--text);
+  box-shadow: 0 0 14px var(--brand-2);
+  color: var(--muted);
 }
 section[aria-labelledby="hero-title"] .boton {
   grid-area: cta;
   justify-self: center;
   display: block;
   width: max-content;
-}
-
-@media (max-width: 600px) {
-  section[aria-labelledby="hero-title"] {
-    padding-inline: 12px;
-  }
 }
 /* ============================================================
    3) OFERTAS DEL MES (Grid)
@@ -289,7 +272,7 @@ footer img {
   font-size: 1.1rem;
 }
 /* ============================================================
-   5) PRODUCTOS
+   5) PRODUCTOS + GAMING
    ============================================================ */
 #contenido > header h1 {
   text-align: center;
@@ -301,8 +284,10 @@ footer img {
 #contenido > header p {
   margin-bottom: 1.5rem;
   text-align: center;
-  color: var(--brand-2);
+  color: var(--muted) !important;
+  text-transform: uppercase;
 }
+
 #contenido nav .nav {
   justify-content: center;
   text-transform: uppercase;
@@ -316,10 +301,15 @@ footer img {
   padding: 0.5rem 1.2rem;
   font-size: 1.1rem;
 }
+
 #laptops h2,
 #desktops h2,
 #aio h2,
-#monitores h2 {
+#monitores h2,
+#pcgaming h2,
+#case h2,
+#fuentes h2,
+#accesorios h2 {
   text-align: center;
   color: var(--brand);
   text-transform: uppercase;
@@ -334,51 +324,272 @@ footer img {
 }
 
 /* ============================================================
-   6) RESPONSIVE (Tablets y Celulares)
+   SERVICIO TÉCNICO  — Correcciones de centrado y no-corte
    ============================================================ */
+/*Botones del hero*/
+.btn.btn--primary {
+  background: var(--brand);
+  color: var(--muted);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 0 8px var(--brand);
+  transition: background var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+.btn.btn--primary:hover {
+  background: var(--brand-2);
+  transform: translateY(-1px);
+  box-shadow: 0 0 14px var(--brand-2);
+  color: var(--muted);
+}
+
+.btn.btn--ghost {
+  background: var(--brand);
+  color: var(--muted);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 0 8px var(--brand);
+  transition: background var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+.btn.btn--ghost:hover {
+  background: var(--brand-2);
+  color: var(--muted);
+  transform: translateY(-1px);
+  box-shadow: 0 0 14px var(--brand-2);
+}
+
+/* ---------- Hero ---------- */
+.hero__copy {
+  text-align: center; /* << centrado del hero */
+  margin-inline: auto;
+  max-width: 70ch; /* ancho óptimo para lectura */
+}
+.hero__copy h1 {
+  color: var(--brand);
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.hero__copy p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.hero__cta {
+  display: flex;
+  justify-content: center; /* << centra botones */
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.badges {
+  display: flex;
+  justify-content: center; /* << centra badges */
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--brand-2);
+  font-weight: 700;
+}
+.badges li {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(58, 87, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(58, 87, 255, 0.25);
+}
+
+/* ---------- Secciones base ---------- */
+.section {
+  padding: clamp(28px, 6vw, 72px) 0;
+}
+.section--alt {
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+}
+.section__title {
+  color: var(--brand-2);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+/* ---------- Tarjetas de Servicios ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 2.5vw, 24px);
+}
+.cards > .card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
+  text-align: center;
+}
+.cards > .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px var(--brand-2);
+}
+.cards > .card h3 {
+  color: var(--brand);
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+.cards > .card p {
+  color: var(--muted);
+  margin: 0 0 10px;
+  margin-inline: auto;
+  max-width: 90ch;
+}
+.cards > .card .list {
+  display: grid;
+  gap: 6px;
+  padding-left: 18px;
+  list-style: disc;
+  color: var(--muted);
+  text-align: left;
+  margin: 0 auto;
+  max-width: 64ch;
+}
+
+/* ---------- Pasos (Cómo trabajamos) ---------- */
+.steps {
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto; /* centra el contenedor */
+  padding: 0;
+}
+.steps > li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.steps > li strong {
+  color: var(--brand);
+  white-space: nowrap;
+}
+.steps > li span {
+  color: var(--muted);
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: box-shadow var(--transition);
+}
+.faq[open] {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+.faq > summary {
+  cursor: pointer;
+  color: var(--brand-2);
+  font-weight: 700;
+}
+
+/* ---------- Formulario de Contacto ---------- */
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+.form__group {
+  display: grid;
+  gap: 6px;
+}
+.form__group label {
+  color: var(--brand);
+  font-weight: 700;
+}
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form__group input:focus,
+.form__group textarea:focus {
+  border-color: var(--brand-2);
+  box-shadow: 0 0 0 3px rgba(58, 87, 255, 0.2);
+}
+
+/* Nota y links */
+.small.note {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.small.note a {
+  color: var(--brand-2);
+  text-decoration: underline;
+}
+/* WhatsApp link */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--brand-2);
+  font-weight: 700;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.whatsapp-link:hover {
+  transform: translateY(-1px);
+  color: var(--brand);
+}
+.icono-whatsapp {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+/* RESPONSIVE GLOBAL */
+
+/* Tablets (<= 9px): 3 columnas */
 @media (max-width: 900px) {
-  .tarjetas {
+  .ofertas-grid-container,
+  .grid-globa,
+  .cards {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-    justify-content: center;
-    justify-items: center;
-  }
-  .tarjeta {
-    padding: 14px;
-  }
-  .tarjeta h3 {
-    font-size: 1rem;
-  }
-  .tarjeta img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: calc(var(--radius) - 4px);
   }
 }
 
+/* Celulares (<= px): 2 columnas */
 @media (max-width: 600px) {
-  :root {
-    --gap: 10px;
-    --radius: 10px;
+  .ofertas-grid-container,
+  .grid-global,
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .tarjetas {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-    justify-content: center;
-    justify-items: center;
-  }
-  .tarjeta {
-    padding: 10px;
-  }
-  .tarjeta h3 {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  .tarjeta img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: calc(var(--radius) - 4px);
+}
+
+/* Extra chico (<= 480px): 1 columna */
+@media (max-width: 480px) {
+  .ofertas-grid-container,
+  .grid-global,
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
