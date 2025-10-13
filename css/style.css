@@ -667,3 +667,45 @@ RESPONSIVE GLOBAL
     grid-template-columns: 1fr;
   }
 }
+footer[role="contentinfo"] section {
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(12px, 4vw, 24px);
+}
+footer[role="contentinfo"] img {
+  width: clamp(120px, 22vw, 160px);
+}
+@media (max-width: 900px) {
+  footer[role="contentinfo"] section {
+    justify-content: center;
+    gap: clamp(12px, 3vw, 20px);
+  }
+  .redes {
+    justify-content: center;
+  }
+  .social {
+    text-align: center;
+    width: 100%;
+    order: -1;
+  }
+}
+@media (max-width: 600px) {
+  footer[role="contentinfo"] section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .redes a {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 480px) {
+  footer[role="contentinfo"] {
+    padding: 1.5rem 0;
+  }
+  .redes {
+    gap: 10px;
+  }
+}
