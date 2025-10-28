@@ -1,0 +1,57 @@
+/* ==============================
+            MEDIA QUERIES
+   ============================== */
+
+/* Escritorio grande (>= 1200px): 5 columnas */
+@media (min-width: 1200px) {
+  .ofertas-grid-container,
+  .grid-global,
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Tablets (<= 900px): 3 columnas */
+@media (max-width: 900px) {
+  .ofertas-grid-container,
+  .grid-global,
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Celulares (<= 600px): 2 columnas */
+@media (max-width: 600px) {
+  .ofertas-grid-container,
+  .grid-global,
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra chico (<= 480px): 1 columna */
+@media (max-width: 480px) {
+  .ofertas-grid-container,
+  .grid-global,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ≥992px: ajustes de footer */
+@media (min-width: 992px) {
+  footer[role="contentinfo"] {
+    section {
+      justify-content: space-between;
+      text-align: center;
+    }
+    .social {
+      flex: 0 0 auto;
+      order: 2;
+      margin: 0;
+    }
+  }
+  .redes {
+    order: 3;
+  }
+}

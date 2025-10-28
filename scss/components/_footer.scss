@@ -1,0 +1,57 @@
+/* ==============================
+   COMPONENTE: FOOTER
+   ============================== */
+
+footer[role="contentinfo"] {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background: var(--bg-soft);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+  }
+
+  img {
+    width: 160px;
+    height: auto;
+  }
+
+  .redes {
+    display: flex;
+    gap: calc(var(--gap) * 0.75);
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      transition: background var(--transition), transform var(--transition),
+        box-shadow var(--transition);
+
+      &:hover {
+        background: var(--brand);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px var(--brand);
+      }
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .social {
+    color: var(--brand);
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,525 @@
+/* ==============================
+            MAIN 
+   ============================== */
+
+/* ============================================================
+   2) HERO / PORTADA (Grid)
+   ============================================================ */
+section[aria-labelledby="hero-title"] {
+  display: grid;
+  grid-template-areas:
+    "txt"
+    "car"
+    "cta";
+  grid-template-rows: auto auto auto;
+  gap: var(--gap, 16px);
+
+  /* Titulo y slogan */
+  .texto {
+    grid-area: txt;
+    text-align: center;
+
+    h1 {
+      color: var(--brand);
+      font-size: clamp(2rem, 4vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+    p {
+      color: var(--brand-2);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 700;
+      margin-top: 0%;
+    }
+  }
+
+  /* Carrusel de bootstrap */
+  #carouselExampleIndicators {
+    grid-area: car;
+    width: 90%;
+    margin-inline: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 14px var(--brand);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+      border-color 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 14px var(--brand-2);
+    }
+  }
+
+  /* boton hero */
+  .boton {
+    grid-area: cta;
+    justify-self: center;
+    display: block;
+    width: max-content;
+  }
+}
+
+/* Botón reutilizable */
+.boton {
+  text-decoration: none;
+  display: inline-block;
+  background: var(--brand);
+  color: var(--muted);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 0 8px var(--brand);
+  transition: background var(--transition), transform var(--transition);
+  text-align: center;
+
+  &:hover {
+    background: var(--brand-2);
+    transform: translateY(-1px);
+    box-shadow: 0 0 14px var(--brand-2);
+    color: var(--muted);
+  }
+}
+
+/* ============================================================
+   3) OFERTAS DEL MES (Grid)
+   ============================================================ */
+.ofertas-grid {
+  margin-top: 2.5rem;
+  padding-inline: clamp(10px, 3vw, 24px);
+
+  h2 {
+    text-align: center;
+    color: var(--brand-2);
+    border-radius: 5px;
+    margin-bottom: 1.25rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+
+.ofertas-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 2vw, 20px);
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.oferta {
+  width: 100%;
+  max-width: 900px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 12px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 0 12px var(--brand);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px var(--brand-2);
+  }
+
+  .carousel {
+    width: 100%;
+    border-radius: calc(var(--radius) - 4px);
+    overflow: hidden;
+  }
+
+  .oferta-img {
+    width: 100%;
+  }
+
+  .oferta-titulo {
+    margin: 6px 4px 10px;
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    color: var(--brand);
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   5) PRODUCTOS + GAMING
+   ============================================================ */
+#contenido {
+  > header {
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      color: var(--brand);
+      text-transform: uppercase;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--muted) !important;
+      text-transform: uppercase;
+    }
+  }
+
+  nav {
+    .nav {
+      justify-content: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.nav-pills .nav-link.active {
+  background-color: transparent !important;
+  color: #0d6efd !important;
+}
+
+#contenido > nav .nav-link {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+}
+
+#laptops h2,
+#desktops h2,
+#aio h2,
+#monitores h2,
+#pcgaming h2,
+#case h2,
+#fuentes h2,
+#accesorios h2 {
+  text-align: center;
+  color: var(--brand);
+  text-transform: uppercase;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px var(--brand-2);
+  }
+}
+
+/* ============================================================
+   SERVICIO TÉCNICO — centrado/no-corte y UI
+   ============================================================ */
+.btn {
+  &.btn--primary,
+  &.btn--ghost {
+    background: var(--brand);
+    color: var(--muted);
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 0 8px var(--brand);
+    transition: background var(--transition), transform var(--transition),
+      box-shadow var(--transition);
+
+    &:hover {
+      background: var(--brand-2);
+      transform: translateY(-1px);
+      box-shadow: 0 0 14px var(--brand-2);
+      color: var(--muted);
+    }
+  }
+}
+
+/* Hero servicio técnico */
+.hero__copy {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 70ch;
+
+  h1 {
+    color: var(--brand);
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  p {
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+}
+
+.hero__cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--brand-2);
+  font-weight: 700;
+
+  li {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(58, 87, 255, 0.12);
+    box-shadow: inset 0 0 0 1px rgba(58, 87, 255, 0.25);
+  }
+}
+
+/* Secciones base */
+.section {
+  padding: clamp(28px, 6vw, 72px) 0;
+
+  &--alt {
+    background: var(--bg-soft);
+    border-radius: var(--radius);
+  }
+}
+.section__title {
+  color: var(--brand-2);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+/* Tarjetas de Servicios */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 2.5vw, 24px);
+
+  > .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    transition: transform var(--transition), box-shadow var(--transition);
+    height: 100%;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px var(--brand-2);
+    }
+
+    h3 {
+      color: var(--brand);
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+    p {
+      color: var(--muted);
+      margin: 0 0 10px;
+      margin-inline: auto;
+      max-width: 90ch;
+    }
+    .list {
+      display: grid;
+      gap: 6px;
+      padding-left: 18px;
+      list-style: disc;
+      color: var(--muted);
+      text-align: left;
+      margin: 0 auto;
+      max-width: 64ch;
+    }
+  }
+}
+
+/* Pasos (Cómo trabajamos) */
+.steps {
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+
+  > li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px 14px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+
+    strong {
+      color: var(--brand);
+      white-space: nowrap;
+    }
+    span {
+      color: var(--muted);
+    }
+  }
+}
+
+/* FAQ */
+.faq {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: box-shadow var(--transition);
+
+  &[open] {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  }
+
+  > summary {
+    cursor: pointer;
+    color: var(--brand-2);
+    font-weight: 700;
+  }
+}
+
+/* Formulario de Contacto */
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+
+  &__group {
+    display: grid;
+    gap: 6px;
+
+    label {
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: calc(var(--radius) - 4px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+
+      &:focus {
+        border-color: var(--brand-2);
+        box-shadow: 0 0 0 3px rgba(58, 87, 255, 0.2);
+      }
+    }
+  }
+}
+
+/* Nota y links */
+.small.note {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+
+  a {
+    color: var(--brand-2);
+    text-decoration: underline;
+  }
+}
+
+/* WhatsApp link */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--brand-2);
+  font-weight: 700;
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    color: var(--brand);
+  }
+
+  .icono-whatsapp {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+  }
+}
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+#contenido {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+#acerca {
+  h1 {
+    font-size: clamp(2rem, 1.2rem + 2vw, 3rem);
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    color: var(--brand);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  p {
+    color: var(--muted);
+  }
+}
+
+/* Sucursales */
+#ubicaciones {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: clamp(1.4rem, 1rem + 1.2vw, 2rem);
+    color: var(--brand-2);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.sucursal {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.25rem;
+
+  h3 {
+    font-size: 1.15rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    color: var(--muted);
+
+    strong {
+      color: var(--text);
+    }
+  }
+}
+
+/* Mapa responsive */
+.mapa {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  margin-top: 0.75rem;
+  aspect-ratio: 16 / 9;
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}

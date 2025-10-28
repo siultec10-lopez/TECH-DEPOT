@@ -1,0 +1,45 @@
+/* ==============================
+            HEADER + NAV
+   ============================== */
+
+/* ============================================================
+   1) HEADER + NAV (Flexbox)
+   ============================================================ */
+header[role="banner"] {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0.2rem var(--gap);
+  background: var(--bg-soft);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 6px var(--brand);
+
+  .navbar-brand img {
+    height: auto;
+    display: block;
+  }
+}
+
+/* Colores de texto del NAV */
+.navbar {
+  .nav-link {
+    color: var(--brand);
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: var(--brand-2);
+      text-shadow: 0 2px 4px var(--brand-2);
+    }
+
+    &.active,
+    &[aria-current="page"] {
+      color: var(--brand-2);
+      text-shadow: 2px 2px 4px var(--brand-2);
+    }
+  }
+}
